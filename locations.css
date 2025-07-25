@@ -1,0 +1,415 @@
+/* Locations Page Specific Styles */
+
+/* Hero Section */
+.locations-hero {
+    position: relative;
+    height: 60vh;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.locations-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    animation: heroGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.locations-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.locations-hero .hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.locations-hero .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.locations-hero .hero-subtitle {
+    font-size: 1.3rem;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Locations Section */
+.locations-section {
+    padding: 100px 0;
+    background: #1a1a1a;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.location-card {
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid #333;
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(212, 175, 55, 0.2);
+    border-color: #D4AF37;
+}
+
+.location-card.featured {
+    border: 2px solid #D4AF37;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+}
+
+.location-card.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.location-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border: 2px solid #D4AF37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.location-card:hover .location-image img {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
+    border-color: #FFD700;
+}
+
+.location-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.location-content {
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.location-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #D4AF37;
+    margin-bottom: 1.5rem;
+}
+
+.location-details {
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.detail-item .icon {
+    font-size: 1.2rem;
+    min-width: 25px;
+}
+
+.detail-item p {
+    color: #ccc;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.location-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.feature {
+    background: rgba(212, 175, 55, 0.1);
+    color: #D4AF37;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.location-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.location-actions .btn {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* Map Section */
+.map-section {
+    padding: 100px 0;
+    background: #000;
+}
+
+.map-container {
+    margin-top: 3rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.map-placeholder {
+    height: 500px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-overlay {
+    text-align: center;
+    z-index: 2;
+}
+
+.map-overlay h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.map-overlay p {
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.map-pins {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.map-pin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.map-pin:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: #D4AF37;
+    transform: translateY(-5px);
+}
+
+.pin-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #D4AF37;
+}
+
+.pin-label {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Features Section */
+.features-section {
+    padding: 100px 0;
+    background: #1a1a1a;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: #000;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.8s ease;
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+    border-color: #D4AF37;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-card h3 {
+    color: #D4AF37;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card p {
+    color: #ccc;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Navigation Active State */
+.nav-link.active {
+    color: #D4AF37;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .locations-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .locations-hero .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .location-card {
+        margin: 0 1rem;
+    }
+    
+    .location-actions {
+        flex-direction: column;
+    }
+    
+    .location-actions .btn {
+        flex: none;
+    }
+    
+    .map-pins {
+        gap: 1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .locations-section,
+    .map-section,
+    .features-section {
+        padding: 50px 0;
+    }
+    
+    .location-content {
+        padding: 1.5rem;
+    }
+    
+    .location-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .map-placeholder {
+        height: 400px;
+    }
+    
+    .map-overlay h3 {
+        font-size: 1.5rem;
+    }
+}

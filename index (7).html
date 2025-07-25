@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatABC - Luxury Dining Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="ChatABC - Where Culinary Art Meets Excellence. Luxury dining experience in Malaysia's finest locations.">
+    <meta property="og:title" content="ChatABC - Luxury Dining Experience">
+    <meta property="og:description" content="Experience culinary excellence at Malaysia's premier luxury restaurant chain.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="graffiti-container">
+                <svg class="graffiti-svg" viewBox="0 0 400 100">
+                    <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="graffiti-text">ChatABC</text>
+                </svg>
+            </div>
+            <p class="loading-tagline">Where Culinary Art Meets Excellence</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>ChatABC</h1>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#reservations" class="nav-link">Reservations</a></li>
+                    <li><a href="#gift-cards" class="nav-link">Gift Cards</a></li>
+                    <li><a href="locations.html" class="nav-link">Locations</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="admin.php" class="nav-link">Admin</a></li>
+                </ul>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+    <span class="cart-emoji" aria-label="Cart"></span>
+    <span class="cart-count" id="cart-count">0</span>
+</div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-video">
+                <video autoplay muted loop>
+                    <source src="https://player.vimeo.com/external/342571552.sd.mp4?s=6c5c6b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Culinary Excellence</h1>
+                <p class="hero-subtitle">Experience the finest dining in Malaysia's most prestigious locations</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('reservations')">Make Reservation</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('menu')">View Menu</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Card Preview Section -->
+        <section class="gift-card-preview">
+            <div class="container">
+                <h2 class="section-title">Premium Gift Cards</h2>
+                <div class="gift-card-3d" id="gift-card-3d">
+                    <div class="card-container">
+                        <div class="gift-card">
+                            <div class="card-front">
+                                <div class="card-logo">ChatABC</div>
+                                <div class="card-amount">RM 100</div>
+                                <div class="card-text">Gift Card</div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-stripe"></div>
+                                <div class="card-code">CHAT-ABC-2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-controls">
+                        <p class="card-instruction">Gift a giftcard someone close to you</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="scrollToSection('gift-cards')">Purchase Gift Card</button>
+            </div>
+        </section>
+
+        <!-- Featured Dishes -->
+        <section class="featured-dishes">
+            <div class="container">
+                <h2 class="section-title">Signature Dishes</h2>
+                <div class="dishes-carousel" id="dishes-carousel">
+                    <div class="carousel-container">
+                        <div class="dish-card active">
+                            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Wagyu Beef">
+                            <div class="dish-overlay">
+                                <div class="dish-rating">★★★★★</div>
+                                <div class="dish-badge">Chef's Special</div>
+                            </div>
+                            <div class="dish-info">
+                                <h3>Premium Wagyu Beef</h3>
+                                <p>Perfectly grilled A5 Wagyu with truffle sauce</p>
+                                <span class="price">RM 58</span>
+                            </div>
+                        </div>
+                        <div class="dish-card">
+                            <img src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg" alt="Lobster">
+                            <div class="dish-overlay">
+                                <div class="dish-rating">★★★★★</div>
+                                <div class="dish-badge">Popular</div>
+                            </div>
+                            <div class="dish-info">
+                                <h3>Boston Lobster</h3>
+                                <p>Fresh lobster with garlic butter and herbs</p>
+                                <span class="price">RM 52</span>
+                            </div>
+                        </div>
+                        <div class="dish-card">
+                            <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg" alt="Dessert">
+                            <div class="dish-overlay">
+                                <div class="dish-rating">★★★★★</div>
+                                <div class="dish-badge">Signature</div>
+                            </div>
+                            <div class="dish-info">
+                                <h3>Chocolate Soufflé</h3>
+                                <p>Decadent chocolate with gold leaf</p>
+                                <span class="price">RM 42</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2 class="section-title">Our Menu</h2>
+                <div class="menu-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="appetizers">Appetizers</button>
+                    <button class="filter-btn" data-category="mains">Mains</button>
+                    <button class="filter-btn" data-category="desserts">Desserts</button>
+                    <button class="filter-btn" data-category="beverages">Beverages</button>
+                </div>
+                <div class="menu-search">
+                    <input type="text" id="menu-search" placeholder="Search dishes...">
+                </div>
+                <div class="menu-grid" id="menu-grid">
+                    <!-- Menu items will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservations Section -->
+        <section id="reservations" class="reservations-section">
+            <div class="container">
+                <h2 class="section-title">Make a Reservation</h2>
+                <form class="reservation-form" id="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-date">Date</label>
+                            <input type="date" id="res-date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-time">Time</label>
+                            <select id="res-time" name="time" required>
+                                <option value="">Select Time</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="19:30">7:30 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="20:30">8:30 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-guests">Guests</label>
+                            <select id="res-guests" name="guests" required>
+                                <option value="">Select Guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                                <option value="7">7 Guests</option>
+                                <option value="8">8 Guests</option>
+                                <option value="9">9 Guests</option>
+                                <option value="10">10 Guests</option>
+                                <option value="15">15 Guests</option>
+                                <option value="20">20 Guests</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-location">Location</label>
+                            <select id="res-location" name="location" required>
+                                <option value="">Select Location</option>
+                                <option value="klcc">KLCC, Kuala Lumpur</option>
+                                <option value="pj">Petaling Jaya</option>
+                                <option value="georgetown">Georgetown, Penang</option>
+                                <option value="jb">Johor Bahru</option>
+                                <option value="kk">Kota Kinabalu</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-occasion">Special Occasion</label>
+                            <select id="res-occasion" name="occasion">
+                                <option value="">None</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="business">Business Dinner</option>
+                                <option value="proposal">Proposal</option>
+                                <option value="celebration">Celebration</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="res-name">Full Name</label>
+                            <input type="text" id="res-name" name="name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-email">Email</label>
+                            <input type="email" id="res-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-phone">Phone</label>
+                            <input type="tel" id="res-phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="res-notes">Special Requests</label>
+                            <textarea id="res-notes" name="notes" rows="3" placeholder="Dietary restrictions, seating preferences, etc."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Table</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Gift Cards Section -->
+        <section id="gift-cards" class="gift-cards-section">
+            <div class="container">
+                <h2 class="section-title">Gift Cards</h2>
+                <div class="gift-card-options">
+                    <div class="card-preview-section">
+                        <h3>ChatAbc Premium Card</h3>
+                        <div class="gift-card-interactive" id="interactive-gift-card">
+                            <div class="card-3d-container">
+                                <div class="gift-card-3d-model">
+                                    <div class="card-front-3d">
+                                        <div class="card-logo-3d">ChatABC</div>
+                                        <div class="card-amount-3d" id="preview-amount">RM 100</div>
+                                        <div class="card-text-3d">Premium Gift Card</div>
+                                        <div class="card-pattern"></div>
+                                    </div>
+                                    <div class="card-back-3d">
+                                        <div class="card-stripe-3d"></div>
+                                        <div class="card-code-3d">CHAT-ABC-XXXX</div>
+                                        <div class="card-terms">Terms & Conditions Apply</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-interaction-hint">
+                                <p>🖱️ Drag to rotate • 🔍 Scroll to zoom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="gift-card-form" id="gift-card-form">
+                        <div class="amount-selection">
+                            <label>Amount</label>
+                            <div class="amount-buttons">
+                                <button type="button" class="amount-btn" data-amount="50">RM 50</button>
+                                <button type="button" class="amount-btn" data-amount="100">RM 100</button>
+                                <button type="button" class="amount-btn active" data-amount="200">RM 200</button>
+                            </div>
+                            <input type="number" id="custom-amount" placeholder="Custom amount (RM 50-200)" min="50" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name">Recipient Name</label>
+                            <input type="text" id="recipient-name" name="recipient_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-email">Recipient Email</label>
+                            <input type="email" id="recipient-email" name="recipient_email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gift-message">Personal Message</label>
+                            <textarea id="gift-message" name="message" rows="3" placeholder="Add a personal message..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="sender-name">Your Name</label>
+                            <input type="text" id="sender-name" name="sender_name" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Purchase Gift Card</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Guests Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Exceptional dining experience. The Wagyu beef was perfectly cooked and the service was impeccable."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Sarah Chen">
+                            <div>
+                                <h4>Sarah Chen</h4>
+                                <span>Food Critic</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"ChatABC redefined luxury dining for me. Every detail was perfect, from ambiance to the last bite."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg" alt="Marcus Wong">
+                            <div>
+                                <h4>Marcus Wong</h4>
+                                <span>Business Executive</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"The perfect venue for our anniversary. The staff made our evening truly memorable."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Lisa Tan">
+                            <div>
+                                <h4>Lisa Tan</h4>
+                                <span>Regular Guest</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-avatar">👨‍💼</div>
+                        <h3>Arwin A/L Tharman</h3>
+                        <p>Chief Executive Officer</p>
+                        <a href="https://instagram.com/arwin_58.09" target="_blank" class="social-link">@arwin_58.09</a>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-avatar">👨‍🍳</div>
+                        <h3>Khaw Eason</h3>
+                        <p>Co-Founder</p>
+                        <a href="https://instagram.com/eason.khaw.7" target="_blank" class="social-link">@eason.khaw.7</a>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-avatar">👨‍💻</div>
+                        <h3>Tan Zi Hong</h3>
+                        <p>Janitor</p>
+                        <a href="https://instagram.com/tzhong" target="_blank" class="social-link">@tzhong</a>
+                    </div>
+                </div>
+                
+                <div class="additional-content">
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <div class="content-icon">🏆</div>
+                            <h3>Awards & Recognition</h3>
+                            <p>Winner of Malaysia's Best Fine Dining Experience 2024. Recognized for exceptional culinary innovation and service excellence.</p>
+                        </div>
+                        <div class="content-card">
+                            <div class="content-icon">🌟</div>
+                            <h3>Chef's Philosophy</h3>
+                            <p>Our culinary team believes in creating memorable experiences through the perfect fusion of traditional Malaysian flavors and modern techniques.</p>
+                        </div>
+                        <div class="content-card">
+                            <div class="content-icon">🍷</div>
+                            <h3>Wine Collection</h3>
+                            <p>Curated selection of over 200 premium wines from renowned vineyards worldwide, perfectly paired with our signature dishes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="newsletter-signup">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to receive exclusive offers and updates</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ChatABC</h3>
+                    <p>Where Culinary Art Meets Excellence</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li>KLCC, Kuala Lumpur</li>
+                        <li>Petaling Jaya</li>
+                        <li>Georgetown, Penang</li>
+                        <li>Johor Bahru</li>
+                        <li>Kota Kinabalu</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservations">Reservations</a></li>
+                        <li><a href="#gift-cards">Gift Cards</a></li>
+                        <li><a href="admin.php">Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📞 +60 3-2161 8888</li>
+                        <li>✉️ info@chatabc.com</li>
+                        <li>🕒 Daily: 6:00 PM - 11:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChatABC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Shopping Cart</h3>
+                <span class="close" onclick="closeCart()">&times;</span>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be populated here -->
+            </div>
+            <div class="cart-total">
+                <div class="total-line">
+                    <span>Total: RM <span id="cart-total">0.00</span></span>
+                </div>
+                <button class="btn btn-primary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

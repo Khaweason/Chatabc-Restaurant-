@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Locations - ChatABC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="locations.css">
+    <meta name="description" content="Visit ChatABC at our premium locations across Malaysia - KLCC, Petaling Jaya, Georgetown, Johor Bahru, and Kota Kinabalu.">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><a href="index.html">ChatABC</a></h1>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#menu" class="nav-link">Menu</a></li>
+                    <li><a href="index.html#reservations" class="nav-link">Reservations</a></li>
+                    <li><a href="index.html#gift-cards" class="nav-link">Gift Cards</a></li>
+                    <li><a href="locations.html" class="nav-link active">Locations</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="locations-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Our Locations</h1>
+                <p class="hero-subtitle">Experience ChatABC across Malaysia's most prestigious destinations</p>
+            </div>
+        </section>
+
+        <!-- Locations Grid -->
+        <section class="locations-section">
+            <div class="container">
+                <h2 class="section-title">Find Us Across Malaysia</h2>
+                <div class="locations-grid">
+                    <!-- KLCC Location -->
+                    <div class="location-card featured">
+                        <div class="location-image">
+                            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="ChatABC KLCC">
+                            <div class="location-badge">Flagship</div>
+                        </div>
+                        <div class="location-content">
+                            <h3>ChatABC KLCC</h3>
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <span class="icon">📍</span>
+                                    <div>
+                                        <p>Level 86, Petronas Twin Towers</p>
+                                        <p>Kuala Lumpur City Centre, 50088</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">📞</span>
+                                    <p>+60 3-2161 8888</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">🕒</span>
+                                    <p>Daily: 6:00 PM - 11:00 PM</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">👥</span>
+                                    <p>Capacity: 120 guests</p>
+                                </div>
+                            </div>
+                            <div class="location-features">
+                                <span class="feature">City Views</span>
+                                <span class="feature">Private Dining</span>
+                                <span class="feature">Valet Parking</span>
+                            </div>
+                            <div class="location-actions">
+                                <button class="btn btn-primary" onclick="makeReservation('klcc')">Reserve Table</button>
+                                <button class="btn btn-secondary" onclick="viewMap('klcc')">View Map</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Petaling Jaya Location -->
+                    <div class="location-card">
+                        <div class="location-image">
+                            <img src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg" alt="ChatABC Petaling Jaya">
+                        </div>
+                        <div class="location-content">
+                            <h3>ChatABC Petaling Jaya</h3>
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <span class="icon">📍</span>
+                                    <div>
+                                        <p>1 Utama Shopping Centre, Level 4</p>
+                                        <p>Bandar Utama, 47800 Petaling Jaya</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">📞</span>
+                                    <p>+60 3-7726 8888</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">🕒</span>
+                                    <p>Daily: 6:00 PM - 11:00 PM</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">👥</span>
+                                    <p>Capacity: 80 guests</p>
+                                </div>
+                            </div>
+                            <div class="location-features">
+                                <span class="feature">Mall Access</span>
+                                <span class="feature">Family Friendly</span>
+                                <span class="feature">Free Parking</span>
+                            </div>
+                            <div class="location-actions">
+                                <button class="btn btn-primary" onclick="makeReservation('pj')">Reserve Table</button>
+                                <button class="btn btn-secondary" onclick="viewMap('pj')">View Map</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Georgetown Location -->
+                    <div class="location-card">
+                        <div class="location-image">
+                            <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg" alt="ChatABC Georgetown">
+                        </div>
+                        <div class="location-content">
+                            <h3>ChatABC Georgetown</h3>
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <span class="icon">📍</span>
+                                    <div>
+                                        <p>Eastern & Oriental Hotel</p>
+                                        <p>10 Lebuh Farquhar, 10200 Georgetown</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">📞</span>
+                                    <p>+60 4-222 8888</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">🕒</span>
+                                    <p>Daily: 6:00 PM - 11:00 PM</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">👥</span>
+                                    <p>Capacity: 60 guests</p>
+                                </div>
+                            </div>
+                            <div class="location-features">
+                                <span class="feature">Heritage Setting</span>
+                                <span class="feature">Sea Views</span>
+                                <span class="feature">Historic Charm</span>
+                            </div>
+                            <div class="location-actions">
+                                <button class="btn btn-primary" onclick="makeReservation('georgetown')">Reserve Table</button>
+                                <button class="btn btn-secondary" onclick="viewMap('georgetown')">View Map</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Johor Bahru Location -->
+                    <div class="location-card">
+                        <div class="location-image">
+                            <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg" alt="ChatABC Johor Bahru">
+                        </div>
+                        <div class="location-content">
+                            <h3>ChatABC Johor Bahru</h3>
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <span class="icon">📍</span>
+                                    <div>
+                                        <p>Paradigm Mall, Level 3</p>
+                                        <p>Skudai, 81200 Johor Bahru</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">📞</span>
+                                    <p>+60 7-558 8888</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">🕒</span>
+                                    <p>Daily: 6:00 PM - 11:00 PM</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">👥</span>
+                                    <p>Capacity: 70 guests</p>
+                                </div>
+                            </div>
+                            <div class="location-features">
+                                <span class="feature">Modern Design</span>
+                                <span class="feature">Shopping Access</span>
+                                <span class="feature">Easy Access</span>
+                            </div>
+                            <div class="location-actions">
+                                <button class="btn btn-primary" onclick="makeReservation('jb')">Reserve Table</button>
+                                <button class="btn btn-secondary" onclick="viewMap('jb')">View Map</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kota Kinabalu Location -->
+                    <div class="location-card">
+                        <div class="location-image">
+                            <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg" alt="ChatABC Kota Kinabalu">
+                        </div>
+                        <div class="location-content">
+                            <h3>ChatABC Kota Kinabalu</h3>
+                            <div class="location-details">
+                                <div class="detail-item">
+                                    <span class="icon">📍</span>
+                                    <div>
+                                        <p>Shangri-La Tanjung Aru Resort</p>
+                                        <p>Locked Bag 174, 88999 Kota Kinabalu</p>
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">📞</span>
+                                    <p>+60 88-327 8888</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">🕒</span>
+                                    <p>Daily: 6:00 PM - 11:00 PM</p>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">👥</span>
+                                    <p>Capacity: 90 guests</p>
+                                </div>
+                            </div>
+                            <div class="location-features">
+                                <span class="feature">Beach Views</span>
+                                <span class="feature">Resort Setting</span>
+                                <span class="feature">Sunset Dining</span>
+                            </div>
+                            <div class="location-actions">
+                                <button class="btn btn-primary" onclick="makeReservation('kk')">Reserve Table</button>
+                                <button class="btn btn-secondary" onclick="viewMap('kk')">View Map</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2 class="section-title">Find Your Nearest Location</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <h3>Interactive Map</h3>
+                            <p>Explore all ChatABC locations across Malaysia</p>
+                            <div class="map-pins">
+                                <div class="map-pin" data-location="klcc">
+                                    <span class="pin-icon">📍</span>
+                                    <span class="pin-label">KLCC</span>
+                                </div>
+                                <div class="map-pin" data-location="pj">
+                                    <span class="pin-icon">📍</span>
+                                    <span class="pin-label">Petaling Jaya</span>
+                                </div>
+                                <div class="map-pin" data-location="georgetown">
+                                    <span class="pin-icon">📍</span>
+                                    <span class="pin-label">Georgetown</span>
+                                </div>
+                                <div class="map-pin" data-location="jb">
+                                    <span class="pin-icon">📍</span>
+                                    <span class="pin-label">Johor Bahru</span>
+                                </div>
+                                <div class="map-pin" data-location="kk">
+                                    <span class="pin-icon">📍</span>
+                                    <span class="pin-label">Kota Kinabalu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Features -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose ChatABC</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Award-Winning</h3>
+                        <p>Recognized as Malaysia's Best Fine Dining Experience 2024</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <h3>Expert Chefs</h3>
+                        <p>World-class culinary team with international experience</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍷</div>
+                        <h3>Premium Selection</h3>
+                        <p>Curated wine collection and artisanal ingredients</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>Luxury Ambiance</h3>
+                        <p>Sophisticated atmosphere perfect for special occasions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ChatABC</h3>
+                    <p>Where Culinary Art Meets Excellence</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li>KLCC, Kuala Lumpur</li>
+                        <li>Petaling Jaya</li>
+                        <li>Georgetown, Penang</li>
+                        <li>Johor Bahru</li>
+                        <li>Kota Kinabalu</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="index.html#reservations">Reservations</a></li>
+                        <li><a href="index.html#gift-cards">Gift Cards</a></li>
+                        <li><a href="admin.php">Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📞 +60 3-2161 8888</li>
+                        <li>✉️ info@chatabc.com</li>
+                        <li>🕒 Daily: 6:00 PM - 11:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChatABC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="locations.js"></script>
+</body>
+</html>
